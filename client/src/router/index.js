@@ -6,14 +6,15 @@ import Posts from '@/components/Posts'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/posts',
       name: 'Posts',
       component: Posts
     },
     {
-      path: '/posts',
+      path: '/',
       name: 'Hello',
       component: Hello
     }
