@@ -1,4 +1,3 @@
-
 import Api from '@/services/Api'
 
 export default {
@@ -7,7 +6,7 @@ export default {
   },
 
   addPost (params) {
-    return Api().post('add_post', params)
+    return Api().post('posts', params)
   },
 
   updatePost (params) {
@@ -16,5 +15,9 @@ export default {
 
   getPost (params) {
     return Api().get('post/' + params.id)
+  },
+
+  deletePost (id) {
+    return Api().delete('posts/' + id)
   }
 }
